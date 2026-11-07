@@ -12,6 +12,12 @@ de inhoud van de aangeleverde CSV wordtn opgeslagen in 1 regel in deze tabel
 #### REGISTRATIE
 voor elke registratie wordt een regel aangemaakt met de diverse kenmerken uitgesplitst
 
+#### INBOX_JSON
+de inhoud van een aangeleverd JSON-bestand wordt opgeslagen in 1 regel in deze tabel (gecontroleerd met ISJSON)
+
+#### REGISTRATIE_JSON
+voor elke registratie uit de JSON wordt een regel aangemaakt, met dezelfde kolommen als REGISTRATIE plus een sleutel en een verwijzing naar INBOX_JSON
+
 ## Views
 #### aantalDagDeelPerMaand
 gebruikt tabel REGISTRATIE
@@ -89,3 +95,8 @@ geeft de Nederlandse maandnamen met maandnummers
 verwerkt de aangeleverde registraties vanuit de tabel INBOX in de tabel REGISTRATIE
 
 na verwerking wordt de verwerkt regel gemarkeerd (verwerkt = 1)
+
+####VERWERK_REGISTRATIES_JSON
+verwerkt de nieuwste onverwerkte JSON-export vanuit de tabel INBOX_JSON in de tabel REGISTRATIE_JSON (volledige verversing)
+
+na verwerking worden alle onverwerkte regels gemarkeerd (verwerkt = 1, verwerkt_op = tijdstip)

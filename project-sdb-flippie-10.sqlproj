@@ -78,8 +78,11 @@
     <Build Include="f1\Tables\status.sql" />
     <Build Include="f1\Views\v_results.sql" />
     <Build Include="migraine\StoredProcedures\verwerk_registratie.sql" />
+    <Build Include="migraine\StoredProcedures\verwerk_registraties_json.sql" />
     <Build Include="migraine\Tables\inbox.sql" />
+    <Build Include="migraine\Tables\inbox_json.sql" />
     <Build Include="migraine\Tables\registratie.sql" />
+    <Build Include="migraine\Tables\registratie_json.sql" />
     <Build Include="migraine\Views\aantalDagDeelPerMaand.sql" />
     <Build Include="migraine\Views\aantalHoofdpijnPerMaand.sql" />
     <Build Include="migraine\Views\aantallenPerJaar.sql" />
